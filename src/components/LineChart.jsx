@@ -4,14 +4,14 @@ import 'chart.js/auto';
 import { Col, Row, Typography } from 'antd';
 const { Title } = Typography;
 const LineChart = ({ch ,coinHistory, currentPrice, coinName }) => {
-  const ref = useRef();
+  // const ref = useRef();
     // ch for any error with change.timestamp
     const coinPrice = [];
     const coinTimestamp = [];
   
     for (let i = 0; i  < coinHistory?.data?.history?.length; i += 1) {
          coinPrice.push(coinHistory?.data?.history[i].price);
-         coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp
+         coinTimestamp.push(new Date(coinHistory?.data?.history[i].timestamp * 1000
           ).toLocaleDateString());
     }
   
