@@ -29,7 +29,7 @@ const Navbar = () => {
            <Avatar src={icon}  size='large'/>
            <Typography.Title level={2} className='logo'>
               <Link to='/'>
-                Crytoverse
+                Crypto Redux
               </Link>
            </Typography.Title>
            <Button className='menu-control-container' onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined/></Button>
